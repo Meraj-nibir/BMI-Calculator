@@ -29,21 +29,21 @@ public class MainActivity extends AppCompatActivity {
                 float height = Float.parseFloat(heightText.getText().toString())/100;
                 float weight = Float.parseFloat(weightText.getText().toString());
                 float result = weight/(height*height);
-                EditText editText = (EditText) findViewById(R.id.editTextNumber3);
-                TextView textView = (TextView) findViewById(R.id.textView2);
+                TextView textView = (TextView) findViewById(R.id.textView7);
+                TextView textView1 = (TextView) findViewById(R.id.textView2);
                 double res = Math.floor((result*100)/100);
-                editText.setText(""+res);
+                textView.setText(""+res);
                 if(res<18.5){
-                    textView.setText("Underweight");
+                    textView1.setText("Underweight");
                 }
                 else if(res>18.5&&res<24.9){
-                    textView.setText("Normal");
+                    textView1.setText("Normal");
                 }
                 else if(res>24.9&&res<29.9){
-                    textView.setText("Overweight");
+                    textView1.setText("Overweight");
                 }
                 else{
-                    textView.setText("Obese");
+                    textView1.setText("Obese");
                 }
 
 
